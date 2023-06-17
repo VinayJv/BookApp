@@ -12,18 +12,19 @@ export function BookCard({props}){
     const selectedBookId = productsData.find((book)=>book.name === props.name).id;
 
     const changeCategory = (event) => {
-        // setProductsData([[...productsData], (productsData[selectedBookId].category = event.target.value)]);
+        setProductsData([...productsData], (productsData[selectedBookId].category = event.target.value));
         console.log(productsData);
     };
 
     return (<div className="book-card">
-        <img src={props.img}></img>
-        <p>{bookState}</p>
-        <select onChange={changeCategory}>
-            {FilteredCategories.map((category)=>
-             bookState === category ? <option value={category} selected key={category}>{category}</option>  : <option value={category} key={category}>{category}</option> 
-            )}
-        </select>
+        <div className="book-card-inner">
+            <img src={props.img}></img>
+            <select onChange={changeCategory}>
+                {FilteredCategories.map((category)=>
+                bookState === category ? <option value={category} selected key={category}>{category}</option>  : <option value={category} key={category}>{category}</option> 
+                )}
+            </select>
         <p>{props.name}</p>
+        </div>
     </div>);
 }

@@ -35,11 +35,19 @@ img{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid red;
 }
 .book-card{
-  border: 1px solid blue;
+  margin: 0.5rem;
   text-align: left;
+}
+select {
+  width: fit-content;
+  border: 1px solid red;
+}
+.book-card-inner{
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 @keyframes App-logo-spin {
