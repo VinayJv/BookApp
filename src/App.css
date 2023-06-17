@@ -27,6 +27,20 @@
 .App-link {
   color: #61dafb;
 }
+img{
+  width: 8rem;
+  height: 12rem;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid red;
+}
+.book-card{
+  border: 1px solid blue;
+  text-align: left;
+}
 
 @keyframes App-logo-spin {
   from {
